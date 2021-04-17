@@ -1,0 +1,30 @@
+.about 
+  &__inner 
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    .title 
+      margin-bottom: 4rem
+
+    &-img 
+      img 
+        width: 60rem  
+
+@media (max-width: 1050px)
+  .about__inner-img 
+    img 
+      width: 50rem  
+
+@media (max-width: 950px)
+  .about__inner
+    flex-wrap: wrap
+    justify-content: center 
+
+  .about__inner-content
+    margin-bottom: 1.5rem             
+
+@media (max-width: 600px)
+  .about__inner-img 
+    img 
+      width: 100%    

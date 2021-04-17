@@ -1,0 +1,111 @@
+.contacts 
+  &__inner 
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    .title 
+      margin-bottom: 4.5rem
+
+    .text 
+      margin-bottom: 4.5rem
+      max-width: 70rem
+
+      p 
+        +font('Open Sans', 1.8rem, white)
+        font-weight: 700
+        line-height: 2.8rem 
+        margin-bottom: 0  
+
+    .form 
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+      width: 100%
+
+      input,
+      textarea 
+        padding: 2rem
+        background: #E5E5E5
+        border-radius: .5rem
+        border: none
+
+        +font('Open Sans', 1.4rem, rgba(51, 51, 51, 0.5))
+        font-weight: 400
+
+        margin-bottom: 1rem
+
+        &:focus 
+            background: darken(#E5E5E5, 10%)  
+
+      input 
+        width: 100%
+        max-width: 42rem
+
+      textarea 
+        width: 100% 
+        height: 12rem    
+        resize: none
+
+      &__info
+        display: flex
+
+        &-adress,
+        &-phone,
+        &-mail
+          display: flex
+          align-items: center
+          
+          &:not(.form__info-mail)
+            margin-right: 1.5rem
+
+          span, a 
+            +font('Open Sans', 1.2rem, rgba(51, 51, 51, 0.5))
+            line-height: 1.2rem
+            font-weight: 700
+            text-decoration: none
+
+          img 
+            width: 1rem  
+            margin-right: 1rem 
+
+      .button
+        max-width: 64rem     
+
+        &:hover 
+          color: black
+          border-color: black 
+
+@media (max-width: 1280px)
+  .contacts__inner .form input
+    max-width: 37rem          
+
+@media (max-width: 1263px)
+  .contacts__inner .form .button
+    margin-top: 1rem 
+
+@media (max-width: 1149px)
+  .contacts__inner .form
+    justify-content: center  
+
+  .contacts__inner .form input:first-child
+    margin-right: 1rem          
+
+@media (max-width: 789px)
+  .contacts__inner .form input
+    width: 100%
+    max-width: none
+
+  .contacts__inner .form input:first-child  
+    margin-right: 0  
+
+  .contacts__inner .form__info 
+    width: 100% 
+    justify-content: center
+    flex-wrap: wrap
+
+@media (max-width: 425px)
+  .contacts__inner .form__info-adress, .contacts__inner .form__info-phone
+    margin-bottom: .7rem       
+    

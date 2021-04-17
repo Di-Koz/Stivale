@@ -1,0 +1,171 @@
+.header
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 1
+
+  background: transparent  
+
+  &.header_fixed 
+    position: fixed
+    left: 0
+    right: 0
+    top: 0
+    z-index: 5
+
+    background: darken($yellow, 18%)
+
+    animation-name: header_opacity
+    animation-duration: .7s
+
+  &__inner 
+    position: relative
+    padding: 4.1rem 0
+
+    .nav 
+      display: flex
+      justify-content: space-between 
+      align-items: center
+
+      padding: 0 4rem
+
+      &__left,
+      &__right
+        &.nav_show 
+          position: absolute
+          top: 100%
+          z-index: 1
+          width: 50%
+
+          display: flex
+          flex-direction: column 
+          align-items: center
+
+          padding: 1rem
+          background: gray
+
+          animation-name: nav_scale
+          animation-duration: 1s
+          transform-origin: top
+
+          .nav__left-link,
+          .nav__right-link 
+            margin-right: 0
+            margin-left: 0
+
+            &:not(:last-child)  
+              margin-bottom: 0.5rem
+
+        &-link  
+          +font('Open Sans', 1.2rem, white)
+          font-weight: 700
+          line-height: 1.8rem
+          text-transform: uppercase
+          text-decoration: none  
+
+          outline: none
+
+          &:hover 
+            text-decoration: underline
+
+      &__left 
+        left: 0
+
+        &-link
+          &:not(:last-child)
+            margin-right: 8rem 
+
+      &__right 
+        right: 0  
+
+        &-link
+          &:not(:first-child)
+            margin-left: 7rem     
+
+      .burger      
+        display: none
+
+        padding: .7rem 0
+        cursor: pointer
+
+        &.burger_active
+          padding: 1.2rem 0
+
+          .burger__item
+            transform: rotate(45deg)
+
+            &::after
+              transform: rotate(-90deg) translateX(.7rem)
+
+            &::before
+              display: none  
+
+        &__item 
+          width: 4rem
+          height: 0.3rem
+          background: white
+          position: relative
+
+          +tr
+
+          &::after,
+          &::before
+            width: 100%
+            height: 100%
+            background: inherit
+
+            content: ''
+            position: absolute
+            left: 0
+            z-index: 1
+
+            +tr
+
+          &::after 
+            bottom: -.7rem
+
+          &::before 
+            top: -.7rem
+
+    &-logo 
+      position: absolute
+      left: 50%
+      bottom: -7.5rem
+      z-index: 1
+
+      transform: translateX(-50%)
+
+@keyframes nav_scale 
+  from 
+    transform: scaleY(0)
+  to 
+    transform: scaleY(1)    
+
+@keyframes header_opacity
+  from 
+    opacity: 0
+  to 
+    opacity: 1        
+
+@media (max-width: 1140px) 
+  .header__inner .nav 
+    padding: 0 
+
+@media (max-width: 1070px) 
+  .header__inner
+    padding: 2rem 0
+
+  .header__inner .nav__left, 
+  .header__inner .nav__right 
+    display: none   
+
+  .header__inner-logo
+    position: static
+    transform: none
+
+    img 
+      width: 6rem  
+
+  .header__inner .nav .burger 
+    display: block     

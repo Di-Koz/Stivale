@@ -1,0 +1,125 @@
+.home 
+  background: url(../css/images/home/bg.jpg) center no-repeat
+  background-size: cover
+
+  &__inner 
+    position: relative
+
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+
+    .subtitle 
+      margin-bottom: 2rem
+
+    .maintitle 
+      margin-bottom: 6.2rem  
+
+    &-buttons 
+      display: flex
+      justify-content: center
+      width: 100%
+
+      margin-bottom: 8rem
+
+      .button
+        max-width: 20rem
+
+        &:first-child
+          margin-right: 4rem  
+
+    &-downbutton 
+      display: flex
+      justify-content: center
+      align-items: center
+
+      width: 6rem
+      height: 6rem
+
+      border: 1px solid rgba(255, 255, 255, 0.2) 
+      border-radius: 50%
+
+      cursor: pointer
+
+      &__wrap 
+        display: flex
+        justify-content: center
+        align-items: center
+
+        width: 4rem
+        height: 4rem
+
+        background: white
+        border-radius: 50%
+
+        +tr
+
+        &:hover 
+          background: $yellow
+
+    &-schedule 
+      position: absolute
+      left: -9%
+      top: 50%
+      z-index: 1
+
+      transform: rotate(-90deg)
+
+      +font('Open Sans', 1.2rem, white)
+      font-weight: 700
+      line-height: 1.2rem   
+
+    .social 
+      position: absolute
+      right: 0
+      top: 50%
+      z-index: 1 
+
+      display: flex
+      flex-direction: column    
+
+      transform: translateY(-50%)
+
+      &__icon
+        &:not(:last-child)
+          margin-bottom: 2rem
+
+        &:hover 
+          svg 
+            fill: $yellow  
+
+@media (max-width: 680px)
+  .home
+    background-image: url(../css/images/home/bg2.jpg)
+
+  .home__inner-buttons 
+    margin-bottom: 4rem
+
+  .home__inner-downbutton 
+    margin-bottom: 2rem
+
+  .home__inner-schedule
+    position: static
+    transform: none
+    margin-bottom: 2rem
+
+  .home__inner .social
+    position: static
+    flex-direction: row
+    transform: none  
+
+  .home__inner .social__icon:not(:last-child) 
+    margin-bottom: 0
+    margin-right: 2rem 
+
+@media (max-width: 439px)
+  .home__inner-buttons 
+    flex-wrap: wrap
+
+    .button 
+      &:first-child
+        margin-right: 0
+        margin-bottom: 1rem
+
+

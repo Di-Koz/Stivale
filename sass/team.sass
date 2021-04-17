@@ -1,0 +1,35 @@
+.team 
+  background: url(../css/images/team/bg.jpg) center no-repeat
+  background-size: cover
+  
+  position: relative
+
+  &__inner 
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    &-img 
+      img
+        width: 58.8rem
+
+    .title 
+      margin-bottom: 4.5rem   
+
+@media (max-width: 1050px)
+  .team__inner-img 
+    img 
+      width: 50rem  
+
+@media (max-width: 950px)
+  .team__inner
+    flex-wrap: wrap
+    justify-content: center 
+
+  .team__inner-content
+    margin-bottom: 1.5rem             
+
+@media (max-width: 600px)
+  .team__inner-img 
+    img 
+      width: 100%        

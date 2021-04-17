@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hunger</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <nav class="nav">
+          <div class="burger">
+            <div class="burger__item"></div>
+          </div>
+
+          <div class="nav__left">
+            <a href="#" class="nav__left-link" data-link="home">Главная</a>
+
+            <a href="#" class="nav__left-link" data-link="about">О нас</a>
+
+            <a href="#" class="nav__left-link" data-link="team">Шеф</a>
+
+            <a href="#" class="nav__left-link" data-link="booking">Бронирование</a>
+          </div>
+
+          <div class="header__inner-logo">
+            <img src="css/images/header/stearing-wheel.svg" alt="stearing-wheel">
+          </div>
+
+          <div class="nav__right">
+            <a href="#" class="nav__right-link" data-link="menu">Меню</a>
+
+            <a href="#" class="nav__right-link" data-link="gallery">Галерея</a>
+
+            <a href="#" class="nav__right-link" data-link="events">Мероприятия</a>
+
+            <a href="#" class="nav__right-link" data-link="contacts">Обратная связь</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="home">
+    <div class="container">
+      <div class="home__inner">
+        <h4 class="subtitle subtitle_main">Ресторан</h4>
+
+        <h1 class="maintitle">Stivale</h1>
+
+        <div class="home__inner-buttons">
+          <button class="button book" type="button" data-link="booking">Забронировать</button>
+
+          <button class="button explore" type="button">Исследовать</button>
+        </div>
+
+        <div class="home__inner-downbutton">
+          <div class="home__inner-downbutton__wrap">
+            <img src="css/images/home/arrow.png" alt="arrow">
+          </div>
+        </div>
+
+        <div class="home__inner-schedule">ПН - ПТ: 20:00 - 22:00, СБ - ВС: 08:00 - 03:00</div>
+
+        <div class="social">
+          <a href="https://facebook.com" target="_blank" class="social__icon">
+            <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg" style="transition: fill .2s linear">
+              <circle cx="31" cy="31" r="30" stroke="white" stroke-opacity="0.2" />
+              <path d="M28.8516 41.9839V33.0386H25.8438V29.4839H28.8516V26.6714C28.8516 25.187 29.2682 24.0412 30.1016 23.2339C30.9349 22.4006 32.0417 21.9839 33.4219 21.9839C34.5417 21.9839 35.4531 22.036 36.1562 22.1401V25.3042H34.2812C33.5781 25.3042 33.0964 25.4604 32.8359 25.7729C32.6276 26.0334 32.5234 26.45 32.5234 27.0229V29.4839H35.8438L35.375 33.0386H32.5234V41.9839H28.8516Z" fill="white"/>
+            </svg>
+          </a>
+
+          <a href="https://twitter.com" target="_blank" class="social__icon">
+            <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="31" cy="31" r="30" stroke="white" stroke-opacity="0.2" />
+              <path d="M38.9297 27.9214C38.9557 28.0256 38.9688 28.1948 38.9688 28.4292C38.9688 30.3042 38.513 32.1141 37.6016 33.8589C36.6641 35.7078 35.349 37.1792 33.6562 38.2729C31.8073 39.4969 29.6849 40.1089 27.2891 40.1089C24.9974 40.1089 22.901 39.4969 21 38.2729C21.2865 38.299 21.612 38.312 21.9766 38.312C23.8776 38.312 25.5833 37.7261 27.0938 36.5542C26.1823 36.5542 25.375 36.2938 24.6719 35.7729C23.9948 35.2261 23.526 34.549 23.2656 33.7417C23.526 33.7677 23.7734 33.7808 24.0078 33.7808C24.3724 33.7808 24.737 33.7417 25.1016 33.6636C24.1641 33.4552 23.3828 32.9735 22.7578 32.2183C22.1328 31.4631 21.8203 30.6037 21.8203 29.6401V29.562C22.3932 29.9006 23.0052 30.0828 23.6562 30.1089C23.1094 29.7183 22.6667 29.2235 22.3281 28.6245C21.9896 28.0256 21.8203 27.3745 21.8203 26.6714C21.8203 25.9422 22.0156 25.2521 22.4062 24.6011C23.4219 25.8771 24.6589 26.8927 26.1172 27.6479C27.6016 28.4032 29.1771 28.8198 30.8438 28.8979C30.7917 28.5854 30.7656 28.2729 30.7656 27.9604C30.7656 27.2313 30.9479 26.5542 31.3125 25.9292C31.6771 25.2782 32.1719 24.7703 32.7969 24.4058C33.4219 24.0412 34.099 23.8589 34.8281 23.8589C35.4271 23.8589 35.974 23.9761 36.4688 24.2104C36.9896 24.4448 37.4453 24.7573 37.8359 25.1479C38.7734 24.9657 39.6458 24.6401 40.4531 24.1714C40.1406 25.1349 39.5417 25.8901 38.6562 26.437C39.4375 26.3328 40.2188 26.1115 41 25.7729C40.4271 26.6063 39.737 27.3224 38.9297 27.9214Z" fill="white" />
+            </svg>
+          </a>
+
+          <a href="https://instagram.com" target="_blank" class="social__icon">
+            <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="31" cy="31" r="30" stroke="white" stroke-opacity="0.2" />
+              <path d="M31 27.4917C30.1927 27.4917 29.4375 27.7 28.7344 28.1167C28.0573 28.5073 27.5104 29.0542 27.0938 29.7573C26.7031 30.4344 26.5078 31.1766 26.5078 31.9839C26.5078 32.7912 26.7031 33.5464 27.0938 34.2495C27.5104 34.9266 28.0573 35.4735 28.7344 35.8901C29.4375 36.2808 30.1927 36.4761 31 36.4761C31.8073 36.4761 32.5495 36.2808 33.2266 35.8901C33.9297 35.4735 34.4766 34.9266 34.8672 34.2495C35.2839 33.5464 35.4922 32.7912 35.4922 31.9839C35.4922 31.1766 35.2839 30.4344 34.8672 29.7573C34.4766 29.0542 33.9297 28.5073 33.2266 28.1167C32.5495 27.7 31.8073 27.4917 31 27.4917ZM31 34.9136C30.1927 34.9136 29.5026 34.6271 28.9297 34.0542C28.3568 33.4813 28.0703 32.7912 28.0703 31.9839C28.0703 31.1766 28.3568 30.4865 28.9297 29.9136C29.5026 29.3407 30.1927 29.0542 31 29.0542C31.8073 29.0542 32.4974 29.3407 33.0703 29.9136C33.6432 30.4865 33.9297 31.1766 33.9297 31.9839C33.9297 32.7912 33.6432 33.4813 33.0703 34.0542C32.4974 34.6271 31.8073 34.9136 31 34.9136ZM36.7422 27.2964C36.7161 27.5828 36.599 27.8302 36.3906 28.0386C36.2083 28.2469 35.974 28.3511 35.6875 28.3511C35.401 28.3511 35.1536 28.2469 34.9453 28.0386C34.737 27.8302 34.6328 27.5828 34.6328 27.2964C34.6328 27.0099 34.737 26.7625 34.9453 26.5542C35.1536 26.3459 35.401 26.2417 35.6875 26.2417C35.974 26.2417 36.2214 26.3459 36.4297 26.5542C36.638 26.7625 36.7422 27.0099 36.7422 27.2964ZM39.7109 28.3511C39.6589 27.5959 39.5417 26.9448 39.3594 26.3979C39.125 25.7469 38.7604 25.187 38.2656 24.7183C37.7969 24.2235 37.237 23.8589 36.5859 23.6245C36.0391 23.4422 35.388 23.3381 34.6328 23.312C33.9036 23.2599 32.6927 23.2339 31 23.2339C29.3073 23.2339 28.0833 23.2599 27.3281 23.312C26.599 23.3381 25.9609 23.4422 25.4141 23.6245C24.763 23.8589 24.1901 24.2235 23.6953 24.7183C23.2266 25.187 22.875 25.7469 22.6406 26.3979C22.4583 26.9448 22.3411 27.5959 22.2891 28.3511C22.263 29.0802 22.25 30.2912 22.25 31.9839C22.25 33.6766 22.263 34.9006 22.2891 35.6558C22.3411 36.3849 22.4583 37.0229 22.6406 37.5698C22.875 38.2209 23.2266 38.7938 23.6953 39.2886C24.1901 39.7573 24.763 40.0959 25.4141 40.3042C25.9609 40.5125 26.599 40.6297 27.3281 40.6558C28.0833 40.7078 29.3073 40.7339 31 40.7339C32.6927 40.7339 33.9036 40.7078 34.6328 40.6558C35.388 40.6297 36.0391 40.5256 36.5859 40.3433C37.237 40.1089 37.7969 39.7573 38.2656 39.2886C38.7604 38.7938 39.125 38.2209 39.3594 37.5698C39.5417 37.0229 39.6458 36.3849 39.6719 35.6558C39.724 34.9006 39.75 33.6766 39.75 31.9839C39.75 30.2912 39.737 29.0802 39.7109 28.3511ZM37.8359 37.1401C37.5234 37.9214 36.9635 38.4813 36.1562 38.8198C35.7396 38.9761 35.0365 39.0802 34.0469 39.1323C33.5 39.1584 32.6927 39.1714 31.625 39.1714H30.375C29.3333 39.1714 28.526 39.1584 27.9531 39.1323C26.9896 39.0802 26.2865 38.9761 25.8438 38.8198C25.0625 38.5073 24.5026 37.9474 24.1641 37.1401C24.0078 36.6974 23.9036 35.9943 23.8516 35.0308C23.8255 34.4578 23.8125 33.6506 23.8125 32.6089V31.3589C23.8125 30.3172 23.8255 29.5099 23.8516 28.937C23.9036 27.9474 24.0078 27.2443 24.1641 26.8276C24.4766 26.0203 25.0365 25.4604 25.8438 25.1479C26.2865 24.9917 26.9896 24.8875 27.9531 24.8354C28.526 24.8094 29.3333 24.7964 30.375 24.7964H31.625C32.6667 24.7964 33.474 24.8094 34.0469 24.8354C35.0365 24.8875 35.7396 24.9917 36.1562 25.1479C36.9635 25.4604 37.5234 26.0203 37.8359 26.8276C37.9922 27.2443 38.0964 27.9474 38.1484 28.937C38.1745 29.4839 38.1875 30.2912 38.1875 31.3589V32.6089C38.1875 33.6506 38.1745 34.4578 38.1484 35.0308C38.0964 35.9943 37.9922 36.6974 37.8359 37.1401Z" fill="white" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="container">
+      <div class="about__inner">
+        <div class="about__inner-content">
+          <h3 class="title title_black">О нас</h3>
+
+          <div class="text text_black">
+            <p>Мы постарались создать для Вас одновременно просторную и уютную атмосферу, чтобы весь Stivale был одним целым.</p>
+
+            <p>Мы решили напомнить, как раньше собирались интеллектуалы, ученые, художники, писатели в итальянских клубах или на квартирах, небольших барах. Они обсуждали жизнь, политику, устраивали профессиональные дискуссии. Эти встречи рождали новые течения, вдохновляли и открывали новые истории.</p>
+          </div>
+        </div>
+
+        <div class="about__inner-img">
+          <img src="css/images/about/image.jpg" alt="firewood">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="container">
+      <h5 class="subtitle">Шеф-повар</h5>
+
+      <div class="team__inner">
+        <div class="team__inner-img">
+          <img src="css/images/team/image.png" alt="chef">
+        </div>
+
+        <div class="team__inner-content">
+          <h3 class="title">Александра</h3>
+
+          <div class="text">
+            <p>В 2018 году выиграла первое место на Московских городских соревнованиях по карвингу.</p>
+
+            <p>Знает японскую, европейскую, итальянскую кухни. Прорабатывает новые блюд, обновляет меню, составляет технологические карты. Набирает и обучает поваров. Контролирует качество отдачи блюд.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking">
+    <div class="container">
+      <h5 class="caption">ПТ - ПТ: <span>20:00 - 22:00</span>, СБ - ВС: <span>20:00 - 03:00</span>, Телефон: <span>+40 729 131 637/+40 726 458 782</span></h5>
+
+      <div class="booking__inner">
+        <div class="booking__inner-content">
+          <h3 class="title title_black">Забронировать</h3>
+
+          <form action="#" class="form">
+            <input type="text" placeholder="Имя">
+
+            <input type="email" placeholder="Почта">
+
+            <input id="input__phone2" type="tel" placeholder="Телефон">
+
+            <div class="select">
+              <select>
+                <option>1 человек</option>
+
+                <option>2 человека</option>
+
+                <option>3 человека</option>
+
+                <option>4 человека</option>
+              </select>
+            </div>
+
+            <input id="input__date" type="text" placeholder="Дата (м/д)">
+
+            <div class="select">
+              <select>
+                <option>Утро</option>
+
+                <option>Обед</option>
+
+                <option>Вечер</option>
+                
+                <option>Ночь</option>
+              </select>
+            </div>
+
+            <button class="button" type="submit">Заказать столик</button>
+          </form>
+        </div>
+
+        <div class="booking__inner-img">
+          <img src="css/images/booking/image.jpg" alt="watch">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="special">
+    <div class="container">
+      <h5 class="subtitle">Десерты</h5>
+
+      <div class="special__inner">
+        <div class="special__inner-slider">
+          <div class="special__inner-slider__slide slide">
+            <div class="slide__img">
+              <img src="css/images/slider/1.jpg" alt="pancake">
+            </div>
+
+            <div class="slide__content">
+              <h3 class="title">Торт с мятным муссом</h3>
+
+              <div class="text">
+                <p>Бисквитный торт с мятным муссом и клубникой. Подается с соусом из маракуйи и малины.</p>
+
+                <p>Пористый, воздушный шоколадный бисквит, лёгкий освежающий мятный мусс, нежный обволакивающий шоколадный крем-ганаш - всё это составляющие торта "Мята и шоколад". Покрыт торт зеркальной глазурью цвета воды южных морей.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="special__inner-slider__slide slide">
+            <div class="slide__img">
+              <img src="css/images/slider/2.jpg" alt="pancake">
+            </div>
+
+            <div class="slide__content">
+              <h3 class="title">Красный бархат</h3>
+
+              <div class="text">
+                <p>Бисквитный торт со сливочно-сырным кремом «Креметте».</p>
+
+                <p>Шоколадный торт тёмно-красного, ярко-красного или красно-коричневого цвета. Традиционно готовится как слоёный пирог с глазурью из сливочного сыра. Для приготовления торта используют пахту, сливочное масло, муку, какао и свёклу или красный пищевой краситель.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="special__inner-slider__slide slide">
+            <div class="slide__img">
+              <img src="css/images/slider/3.jpg" alt="pancake">
+            </div>
+
+            <div class="slide__content">
+              <h3 class="title">Тирамису</h3>
+
+              <div class="text">
+                <p>Крем на основе сыра маскарпоне, желтка, с печеньем «Савоярди», пропитанным кофе.</p>
+
+                <p>Классический итальянский торт «Тирамису» представляет собой бисквитные коржи, пропитанные ромом и пропитанные кофейным кремом, изготовленным на основе сыра «Маскарпоне» и сливок. Украшен кондитерским «велюром» и сахарной пудрой.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="special__inner-slider__slide slide">
+            <div class="slide__img">
+              <img src="css/images/slider/4.jpg" alt="pancake">
+            </div>
+
+            <div class="slide__content">
+              <h3 class="title">Штрудель яблочный</h3>
+
+              <div class="text">
+                <p>Яблочный штрудель с ванильным и карамельным соусом. Подается с шариком мороженого.</p>
+
+                <p>Слово «штрудель» переводится с немецкого как «водоворот, вихрь, воронка, скрученность».Правильный яблочный штрудель сочный, но не промокший, тесто тончайшее, с аппетитной хрустящей корочкой</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="special__inner-slider__slide slide">
+            <div class="slide__img">
+              <img src="css/images/slider/5.jpg" alt="pancake">
+            </div>
+
+            <div class="slide__content">
+              <h3 class="title">Прага</h3>
+
+              <div class="text">
+                <p>Классический шоколадный торт, пропитанный карамельным сиропом.</p>
+
+                <p>Состоит из трёх бисквитных коржей с двумя слоями крема «Пражский». Верхняя и боковые поверхности покрыты повидлом и заглазированы помадкой. Сверху украшен рисунком из крема.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="special__inner-slider__slide slide">
+            <div class="slide__img">
+              <img src="css/images/slider/6.jpg" alt="pancake">
+            </div>
+
+            <div class="slide__content">
+              <h3 class="title">Панна Котта</h3>
+
+              <div class="text">
+                <p>Сливочное желе с теплым ягодным соусом.</p>
+
+                <p>североитальянский десерт из сливок, сахара, желатина и ванили. Дословный перевод этого лакомства с итальянского языка звучит как «варёные сливки», однако это скорее сливочный пудинг или просто сливочное желе с добавлением разных ингредиентов.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu">
+    <div class="container">
+      <div class="menu__inner">
+        <h3 class="title title_black">Восхитительное меню</h3>
+
+        <div class="text text_black">
+          <p>В основе итальянской кухни лежат исторически сложившиеся многовековые традиции с культурными влияниями римлян, греков, лангобардов, арабов, и прочих народов.</p>
+        </div>
+
+        <div class="menu__inner-content content">
+          <nav class="content__nav">
+            <a href="#" class="content__nav-link" data-menu-nav="soupe">Суп</a>
+
+            <a href="#" class="content__nav-link" data-menu-nav="pizza">Пиццы</a>
+
+            <a href="#" class="content__nav-link" data-menu-nav="pasta">Паста</a>
+
+            <a href="#" class="content__nav-link" data-menu-nav="desert">Десерты</a>
+
+            <a href="#" class="content__nav-link" data-menu-nav="wine">Вино</a>
+
+            <a href="#" class="content__nav-link" data-menu-nav="beer">Пиво</a>
+
+            <a href="#" class="content__nav-link" data-menu-nav="drinks">Напитки</a>
+          </nav>
+
+          <div class="content__result">
+            <div class="content__result-column column">
+              <div class="column__item" data-menu-result="pizza">
+                <div class="column__item-title">Грибная . . . . 450 РУБ</div>
+
+                <div class="column__item-description">Томаты, шампиньоны, сыр моцарелла</div>
+              </div>
+              
+              <div class="column__item" data-menu-result="pizza">
+                <div class="column__item-title">С ветчиной . . . . 610 РУБ</div>
+
+                <div class="column__item-description">Томаты, ветчина вареная, сыр моцарелла</div>
+              </div>
+              
+              <div class="column__item" data-menu-result="pizza">
+                <div class="column__item-title">Карбонара . . . . 680 РУБ</div>
+
+                <div class="column__item-description">Сметанная основа, бекон, сыр моцарелла и яйцо, салат латук, свежие помидоры, пармезан</div>
+              </div>
+
+              <div class="column__item" data-menu-result="pizza">
+                <div class="column__item-title">Цезарь . . . . 670 РУБ</div>
+
+                <div class="column__item-description">Майонез с чесноком, сыр моцарелла, куриное филе. Подается с помидорами черри и сыром пармезан.</div>
+              </div>
+
+              <div class="column__item" data-menu-result="pizza">
+                <div class="column__item-title">Куриная . . . . 490 РУБ</div>
+
+                <div class="column__item-description">Томаты, сыр моцарелла, куриное филе</div>
+              </div>
+
+              <div class="column__item" data-menu-result="soupe">
+                <div class="column__item-title">Суп куриный . . . . 250 РУБ</div>
+
+                <div class="column__item-description">Куриный суп с домашней лапшой</div>
+              </div>
+
+              <div class="column__item" data-menu-result="soupe">
+                <div class="column__item-title">Крем-суп томатный . . . . 410 РУБ</div>
+
+                <div class="column__item-description">Пикантный крем-суп из томатов с беконом в сочетании с заправкой из трав.</div>
+              </div>
+
+              <div class="column__item" data-menu-result="pasta">
+                <div class="column__item-title">Помидоры с рикоттой . . . . 400 РУБ</div>
+
+                <div class="column__item-description">Соус из спелых помидоров, базилика, чеснока. Подается с сыром рикоттой</div>
+              </div>
+
+              <div class="column__item" data-menu-result="pasta">
+                <div class="column__item-title">Арабьята . . . . 340 РУБ</div>
+
+                <div class="column__item-description">Обжаренные на оливковом масле чеснок, острый перчик и помидоры черри</div>
+              </div>
+
+              <div class="column__item" data-menu-result="desert">
+                <div class="column__item-title">Торт с мятным мусом . . . . 480 РУБ</div>
+
+                <div class="column__item-description">Бисквитный торт с мятным муссом и клубникой</div>
+              </div>
+
+              <div class="column__item" data-menu-result="desert">
+                <div class="column__item-title">Красный бархат . . . . 370 РУБ</div>
+
+                <div class="column__item-description">Бисквитный торт со сливочно-сырным кремом «Креметте»</div>
+              </div>
+
+              <div class="column__item" data-menu-result="wine">
+                <div class="column__item-title">Пино . . . . 1500 РУБ</div>
+
+                <div class="column__item-description">Прекрасно в качестве сопровождения к повседневной трапезе. Блюда из мяса, птицы</div>
+              </div>
+
+              <div class="column__item" data-menu-result="wine">
+                <div class="column__item-title">Боттега Винай Совиньон Блан . . . . 2600 РУБ</div>
+
+                <div class="column__item-description">Букет интенсивный, с нотами бузины, финиковых листьев, сладкого перца, грейпфрута</div>
+              </div>
+
+              <div class="column__item" data-menu-result="beer">
+                <div class="column__item-title">Да Пино . . . . 375 РУБ</div>
+
+                <div class="column__item-description">Бочковое пиво (светлое, 4,9%)</div>
+              </div>
+
+              <div class="column__item" data-menu-result="drinks">
+                <div class="column__item-title">Водка Русский Стандарт . . . . 200 РУБ</div>
+
+                <div class="column__item-description">Водка премиум класса</div>
+              </div>
+
+              <div class="column__item" data-menu-result="drinks">
+                <div class="column__item-title">Ром Бакарди Аньехо Куатро . . . . 400 РУБ</div>
+
+                <div class="column__item-description">Мягкий, приятный ром, выдержанный 4 года в дубовых бочках под жарким карибским солнцем</div>
+              </div>
+            </div>
+
+            <div class="content__result-column column">
+              <div class="column__item" data-menu-result="pizza">
+                <div class="column__item-title">Американка . . . . 610 РУБ</div>
+
+                <div class="column__item-description">Томаты, сыр моцарелла, ветчина вареная, колбаса «Сальсичча пиканта», шампиньоны</div>
+              </div>
+
+              <div class="column__item" data-menu-result="pizza">
+                <div class="column__item-title">Маргарита . . . . 430 РУБ</div>
+
+                <div class="column__item-description">Томаты, сыр моцарелла, помидоры черри</div>
+              </div>
+
+              <div class="column__item" data-menu-result="pizza">
+                <div class="column__item-title">С семгой . . . . 730 РУБ</div>
+
+                <div class="column__item-description">Соус «Коктейль», слабосоленая семга, коктейльные креветки, сыр моцарелла, помидоры черри</div>
+              </div>
+
+              <div class="column__item" data-menu-result="pizza">
+                <div class="column__item-title">Тропикана . . . . 510 РУБ</div>
+
+                <div class="column__item-description">Томаты, сыр моцарелла, куриное филе, ананас, перец чили</div>
+              </div>
+
+              <div class="column__item" data-menu-result="pizza">
+                <div class="column__item-title">Дьвола . . . . 650 РУБ</div>
+
+                <div class="column__item-description">Томаты, сыр моцарелла, колбаса «Сальсичча пиканта», лук репчатый, маслины, сметана, перец чили</div>
+              </div>
+
+              <div class="column__item" data-menu-result="soupe">
+                <div class="column__item-title">Крем-суп из брокколи . . . . 510 РУБ</div>
+
+                <div class="column__item-description">Крем-суп из брокколи, сливок и креветок</div>
+              </div>
+
+              <div class="column__item" data-menu-result="soupe">
+                <div class="column__item-title">Крем-суп капучино . . . . 270 РУБ</div>
+
+                <div class="column__item-description">Крем-суп из шампиньонов. Подается с гренками</div>
+              </div>
+
+              <div class="column__item" data-menu-result="pasta">
+                <div class="column__item-title">Карбонара . . . . 470 РУБ</div>
+
+                <div class="column__item-description">Сливочный соус с пармезаном, яичным желтком и беконом</div>
+              </div>
+
+              <div class="column__item" data-menu-result="pasta">
+                <div class="column__item-title">Болоньезе . . . . 450 РУБ</div>
+
+                <div class="column__item-description">Мясной соус с овощами и томатами, пармезаном и зеленью</div>
+              </div>
+
+              <div class="column__item" data-menu-result="desert">
+                <div class="column__item-title">Тирамису . . . . 390 РУБ</div>
+
+                <div class="column__item-description">Крем на основе сыра маскарпоне, желтка, с печеньем, пропитанным кофе</div>
+              </div>
+
+              <div class="column__item" data-menu-result="desert">
+                <div class="column__item-title">Штрудель яблочный . . . . 370 РУБ</div>
+
+                <div class="column__item-description">Яблочный штрудель с ванильным и карамельным соусом. Подается с шариком мороженого.</div>
+              </div>
+
+              <div class="column__item" data-menu-result="wine">
+                <div class="column__item-title">Дольчетто Д'Альба Вайра . . . . 4600 РУБ</div>
+
+                <div class="column__item-description">В букете особенно раскрывается аромат черешни и сухих пряных трав</div>
+              </div>
+
+              <div class="column__item" data-menu-result="wine">
+                <div class="column__item-title">Энседа Кьянти . . . . 2000</div>
+
+                <div class="column__item-description">Приятным букетом с тонами вишни, чайных листьев</div>
+              </div>
+
+              <div class="column__item" data-menu-result="beer">
+                <div class="column__item-title">Кромбахер Пилс . . . . 675 РУБ</div>
+
+                <div class="column__item-description">Германия. Бочковое пиво (светлое 4,8%)</div>
+              </div>
+
+              <div class="column__item" data-menu-result="drinks">
+                <div class="column__item-title">Вермут Мартини Россо . . . . 300 РУБ</div>
+
+                <div class="column__item-description">Доминирование луговых трав, и терпкого вкуса, который смягчен высоким содержанием сахара</div>
+              </div>
+
+              <div class="column__item" data-menu-result="drinks">
+                <div class="column__item-title">Ликер Егермейстер Ризерва Биттер . . . . 350 РУБ</div>
+
+                <div class="column__item-description">Ненавязчивая сладость перекрывает горечь, которая отзывается легкими намеками в послевкусии</div>
+              </div>
+            </div>
+
+            <div class="content__result-column column">
+              <div class="column__item" data-menu-result="pizza">
+                <div class="column__item-title">От Шефа . . . . 650 РУБ</div>
+
+                <div class="column__item-description">Томаты, сыры моцарелла и дор блю, салями «Милано», оливки</div>
+              </div>
+
+              <div class="column__item" data-menu-result="pizza">
+                <div class="column__item-title">Сальсичча . . . . 590 РУБ</div>
+
+                <div class="column__item-description">Томаты, яйцо, сыр моцарелла, колбаса «Сальсичча пиканта», пармезан</div>
+              </div>
+
+              <div class="column__item" data-menu-result="pizza">
+                <div class="column__item-title">По-русски . . . . 490 РУБ</div>
+
+                <div class="column__item-description">Майонез с чесноком, сыр моцарелла, ветчина вареная, маринованные огурчики, шампиньоны</div>
+              </div>
+
+              <div class="column__item" data-menu-result="pizza">
+                <div class="column__item-title">4 сыра . . . . 670 РУБ</div>
+
+                <div class="column__item-description">Томаты, сыры моцарелла, дор блю, азиаго, пармезан</div>
+              </div>
+
+              <div class="column__item" data-menu-result="pizza">
+                <div class="column__item-title">Скараморци с грушей . . . . 720 РУБ</div>
+
+                <div class="column__item-description">Ванильный сливочно-сырный соус, сыр моцарелла, сыр скаморца, груша, грецкий орех, сахарная пудра</div>
+              </div>
+
+              <div class="column__item" data-menu-result="soupe">
+                <div class="column__item-title">Суп Чили Кон Карне . . . . 440 РУБ</div>
+
+                <div class="column__item-description">Густой острый суп из говядины, красной фасоли, помидоров, перца чили и чеснока</div>
+              </div>
+
+              <div class="column__item" data-menu-result="soupe">
+                <div class="column__item-title">Суп Маринара . . . . 640 РУБ</div>
+
+                <div class="column__item-description">Пикантный томатный суп с морепродуктами</div>
+              </div>
+
+              <div class="column__item" data-menu-result="pasta">
+                <div class="column__item-title">Маре Монти . . . . 560 РУБ</div>
+
+                <div class="column__item-description">Сливочный или оливковый соус с шампиньонами и
+                тигровыми креветками</div>
+              </div>
+
+              <div class="column__item" data-menu-result="pasta">
+                <div class="column__item-title">Оле Оле . . . . 250 РУБ</div>
+
+                <div class="column__item-description">Обжаренный на оливковом масле чеснок, с добавлением рубленой зелени</div>
+              </div>
+
+              <div class="column__item" data-menu-result="desert">
+                <div class="column__item-title">Прага . . . . 430 РУБ</div>
+
+                <div class="column__item-description">Классический шоколадный торт, пропитанный карамельным сиропом
+                </div>
+              </div>
+
+              <div class="column__item" data-menu-result="desert">
+                <div class="column__item-title">Панна Котта . . . . 330 РУБ</div>
+
+                <div class="column__item-description">Сливочное желе с теплым ягодным соусом</div>
+              </div>
+
+              <div class="column__item" data-menu-result="wine">
+                <div class="column__item-title">Пампини Санджовезе Мерло . . . . 1800 РУБ</div>
+
+                <div class="column__item-description">Сухой гармоничный вкус с пикантной вишневой горчинкой в финале</div>
+              </div>
+
+              <div class="column__item" data-menu-result="wine">
+                <div class="column__item-title">Ланге Россо Вайра . . . . 3500 РУБ</div>
+
+                <div class="column__item-description">Букет цветочный, с нотами красных плодов, черной сливы, специй, миндаля</div>
+              </div>
+
+              <div class="column__item" data-menu-result="beer">
+                <div class="column__item-title">Клаусталер Премиум . . . . 310 РУБ</div>
+
+                <div class="column__item-description">Безалкогольное пиво</div>
+              </div>
+
+              <div class="column__item" data-menu-result="drinks">
+                <div class="column__item-title">Джин Бомбей Сапфир . . . . 420 РУБ</div>
+
+                <div class="column__item-description">с интенсивными тонами апельсина, лимона и пикантными можжевеловыми нотками</div>
+              </div>
+
+              <div class="column__item" data-menu-result="drinks">
+                <div class="column__item-title">Текила Патрон Сильвер . . . . 550 РУБ</div>
+
+                <div class="column__item-description">свежие ноты голубой агавы дополняются сладковатыми оттенками груши и цитрусовых</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="events">
+    <div class="container">
+      <h5 class="subtitle">Частные мероприятия</h5>
+
+      <h5 class="caption">Для заказа частных мероприятий звонить по номеру: <span>+40 729 131 637/+40 726 458 782</span> или используйте форму обратной связи.</h5>
+
+      <div class="events__inner">
+        <div class="events__inner-img">
+          <img src="css/images/events/1.png" alt="weddings">
+        </div>
+
+        <div class="events__inner-img">
+          <img src="css/images/events/2.png" alt="corporate">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="gallery__img">
+      <img src="css/images/gallery/1.jpg" alt="1">
+    </div>
+
+    <div class="gallery__img">
+      <img src="css/images/gallery/2.jpg" alt="2">
+    </div>
+
+    <div class="gallery__img">
+      <img src="css/images/gallery/3.jpg" alt="3">
+    </div>
+
+    <div class="gallery__img">
+      <img src="css/images/gallery/4.jpg" alt="4">
+    </div>
+  </section>
+
+  <section class="contacts">
+    <div class="container">
+      <div class="contacts__inner">
+        <h3 class="title title_black">Обратная связь</h3>
+
+        <div class="text text_black">
+          <p>Вы можете оставить сообщение или отзыв о нашем ресторане. Мы постраемся учесть все пожелания посетителей.</p>
+        </div>
+
+        <form action="#" class="form">
+          <input type="text" placeholder="Имя"> 
+
+          <input id="input__phone1" type="tel" placeholder="Телефон"> 
+
+          <input type="email" placeholder="Почта"> 
+
+          <textarea placeholder="Сообщение"></textarea>
+
+          <div class="form__info">
+            <div class="form__info-adress">
+              <img src="css/images/contacts/location.svg" alt="location">
+
+              <span>г.Москва, ул.Тверская 57</span>
+            </div>
+
+            <div class="form__info-phone">
+              <img src="css/images/contacts/phone.svg" alt="phone">
+
+              <a href="tel:+40729131637">+40 729 131 637/+40 726 458 782</a>
+            </div>
+
+            <div class="form__info-mail">
+              <img src="css/images/contacts/mail.svg" alt="mail">
+
+              <a href="mailto:office@mindblister.com">stivalerest@gmail.com</a>
+            </div>
+          </div>
+
+          <button class="button" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="social">
+          <a href="https://facebook.com" target="_blank" class="social__icon">
+            <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg"
+              style="transition: fill .2s linear">
+              <circle cx="31" cy="31" r="30" stroke="white" stroke-opacity="0.2" />
+              <path
+                d="M28.8516 41.9839V33.0386H25.8438V29.4839H28.8516V26.6714C28.8516 25.187 29.2682 24.0412 30.1016 23.2339C30.9349 22.4006 32.0417 21.9839 33.4219 21.9839C34.5417 21.9839 35.4531 22.036 36.1562 22.1401V25.3042H34.2812C33.5781 25.3042 33.0964 25.4604 32.8359 25.7729C32.6276 26.0334 32.5234 26.45 32.5234 27.0229V29.4839H35.8438L35.375 33.0386H32.5234V41.9839H28.8516Z"
+                fill="white" />
+            </svg>
+          </a>
+
+          <a href="https://twitter.com" target="_blank" class="social__icon">
+            <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="31" cy="31" r="30" stroke="white" stroke-opacity="0.2" />
+              <path
+                d="M38.9297 27.9214C38.9557 28.0256 38.9688 28.1948 38.9688 28.4292C38.9688 30.3042 38.513 32.1141 37.6016 33.8589C36.6641 35.7078 35.349 37.1792 33.6562 38.2729C31.8073 39.4969 29.6849 40.1089 27.2891 40.1089C24.9974 40.1089 22.901 39.4969 21 38.2729C21.2865 38.299 21.612 38.312 21.9766 38.312C23.8776 38.312 25.5833 37.7261 27.0938 36.5542C26.1823 36.5542 25.375 36.2938 24.6719 35.7729C23.9948 35.2261 23.526 34.549 23.2656 33.7417C23.526 33.7677 23.7734 33.7808 24.0078 33.7808C24.3724 33.7808 24.737 33.7417 25.1016 33.6636C24.1641 33.4552 23.3828 32.9735 22.7578 32.2183C22.1328 31.4631 21.8203 30.6037 21.8203 29.6401V29.562C22.3932 29.9006 23.0052 30.0828 23.6562 30.1089C23.1094 29.7183 22.6667 29.2235 22.3281 28.6245C21.9896 28.0256 21.8203 27.3745 21.8203 26.6714C21.8203 25.9422 22.0156 25.2521 22.4062 24.6011C23.4219 25.8771 24.6589 26.8927 26.1172 27.6479C27.6016 28.4032 29.1771 28.8198 30.8438 28.8979C30.7917 28.5854 30.7656 28.2729 30.7656 27.9604C30.7656 27.2313 30.9479 26.5542 31.3125 25.9292C31.6771 25.2782 32.1719 24.7703 32.7969 24.4058C33.4219 24.0412 34.099 23.8589 34.8281 23.8589C35.4271 23.8589 35.974 23.9761 36.4688 24.2104C36.9896 24.4448 37.4453 24.7573 37.8359 25.1479C38.7734 24.9657 39.6458 24.6401 40.4531 24.1714C40.1406 25.1349 39.5417 25.8901 38.6562 26.437C39.4375 26.3328 40.2188 26.1115 41 25.7729C40.4271 26.6063 39.737 27.3224 38.9297 27.9214Z"
+                fill="white" />
+            </svg>
+          </a>
+
+          <a href="https://instagram.com" target="_blank" class="social__icon">
+            <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="31" cy="31" r="30" stroke="white" stroke-opacity="0.2" />
+              <path
+                d="M31 27.4917C30.1927 27.4917 29.4375 27.7 28.7344 28.1167C28.0573 28.5073 27.5104 29.0542 27.0938 29.7573C26.7031 30.4344 26.5078 31.1766 26.5078 31.9839C26.5078 32.7912 26.7031 33.5464 27.0938 34.2495C27.5104 34.9266 28.0573 35.4735 28.7344 35.8901C29.4375 36.2808 30.1927 36.4761 31 36.4761C31.8073 36.4761 32.5495 36.2808 33.2266 35.8901C33.9297 35.4735 34.4766 34.9266 34.8672 34.2495C35.2839 33.5464 35.4922 32.7912 35.4922 31.9839C35.4922 31.1766 35.2839 30.4344 34.8672 29.7573C34.4766 29.0542 33.9297 28.5073 33.2266 28.1167C32.5495 27.7 31.8073 27.4917 31 27.4917ZM31 34.9136C30.1927 34.9136 29.5026 34.6271 28.9297 34.0542C28.3568 33.4813 28.0703 32.7912 28.0703 31.9839C28.0703 31.1766 28.3568 30.4865 28.9297 29.9136C29.5026 29.3407 30.1927 29.0542 31 29.0542C31.8073 29.0542 32.4974 29.3407 33.0703 29.9136C33.6432 30.4865 33.9297 31.1766 33.9297 31.9839C33.9297 32.7912 33.6432 33.4813 33.0703 34.0542C32.4974 34.6271 31.8073 34.9136 31 34.9136ZM36.7422 27.2964C36.7161 27.5828 36.599 27.8302 36.3906 28.0386C36.2083 28.2469 35.974 28.3511 35.6875 28.3511C35.401 28.3511 35.1536 28.2469 34.9453 28.0386C34.737 27.8302 34.6328 27.5828 34.6328 27.2964C34.6328 27.0099 34.737 26.7625 34.9453 26.5542C35.1536 26.3459 35.401 26.2417 35.6875 26.2417C35.974 26.2417 36.2214 26.3459 36.4297 26.5542C36.638 26.7625 36.7422 27.0099 36.7422 27.2964ZM39.7109 28.3511C39.6589 27.5959 39.5417 26.9448 39.3594 26.3979C39.125 25.7469 38.7604 25.187 38.2656 24.7183C37.7969 24.2235 37.237 23.8589 36.5859 23.6245C36.0391 23.4422 35.388 23.3381 34.6328 23.312C33.9036 23.2599 32.6927 23.2339 31 23.2339C29.3073 23.2339 28.0833 23.2599 27.3281 23.312C26.599 23.3381 25.9609 23.4422 25.4141 23.6245C24.763 23.8589 24.1901 24.2235 23.6953 24.7183C23.2266 25.187 22.875 25.7469 22.6406 26.3979C22.4583 26.9448 22.3411 27.5959 22.2891 28.3511C22.263 29.0802 22.25 30.2912 22.25 31.9839C22.25 33.6766 22.263 34.9006 22.2891 35.6558C22.3411 36.3849 22.4583 37.0229 22.6406 37.5698C22.875 38.2209 23.2266 38.7938 23.6953 39.2886C24.1901 39.7573 24.763 40.0959 25.4141 40.3042C25.9609 40.5125 26.599 40.6297 27.3281 40.6558C28.0833 40.7078 29.3073 40.7339 31 40.7339C32.6927 40.7339 33.9036 40.7078 34.6328 40.6558C35.388 40.6297 36.0391 40.5256 36.5859 40.3433C37.237 40.1089 37.7969 39.7573 38.2656 39.2886C38.7604 38.7938 39.125 38.2209 39.3594 37.5698C39.5417 37.0229 39.6458 36.3849 39.6719 35.6558C39.724 34.9006 39.75 33.6766 39.75 31.9839C39.75 30.2912 39.737 29.0802 39.7109 28.3511ZM37.8359 37.1401C37.5234 37.9214 36.9635 38.4813 36.1562 38.8198C35.7396 38.9761 35.0365 39.0802 34.0469 39.1323C33.5 39.1584 32.6927 39.1714 31.625 39.1714H30.375C29.3333 39.1714 28.526 39.1584 27.9531 39.1323C26.9896 39.0802 26.2865 38.9761 25.8438 38.8198C25.0625 38.5073 24.5026 37.9474 24.1641 37.1401C24.0078 36.6974 23.9036 35.9943 23.8516 35.0308C23.8255 34.4578 23.8125 33.6506 23.8125 32.6089V31.3589C23.8125 30.3172 23.8255 29.5099 23.8516 28.937C23.9036 27.9474 24.0078 27.2443 24.1641 26.8276C24.4766 26.0203 25.0365 25.4604 25.8438 25.1479C26.2865 24.9917 26.9896 24.8875 27.9531 24.8354C28.526 24.8094 29.3333 24.7964 30.375 24.7964H31.625C32.6667 24.7964 33.474 24.8094 34.0469 24.8354C35.0365 24.8875 35.7396 24.9917 36.1562 25.1479C36.9635 25.4604 37.5234 26.0203 37.8359 26.8276C37.9922 27.2443 38.0964 27.9474 38.1484 28.937C38.1745 29.4839 38.1875 30.2912 38.1875 31.3589V32.6089C38.1875 33.6506 38.1745 34.4578 38.1484 35.0308C38.0964 35.9943 37.9922 36.6974 37.8359 37.1401Z"
+                fill="white" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

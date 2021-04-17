@@ -1,0 +1,100 @@
+.menu 
+  &__inner 
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    .title 
+      margin-bottom: 4.5rem
+
+    .text 
+      margin-bottom: 5rem
+      max-width: 75rem
+
+      p 
+        +font('Open Sans', 1.8rem, white)
+        font-weight: 700
+        line-height: 2.8rem 
+        margin-bottom: 0         
+
+    &-content
+      width: 100%
+
+      .content__nav
+        display: flex
+        justify-content: center
+
+        margin-bottom: 5rem
+
+        &-link 
+          +font('Open Sans', 1.2rem, #333333)
+          line-height: 1.8rem
+          font-weight: 700
+          text-transform: uppercase
+          text-decoration: none
+
+          padding: 1.6rem 4rem
+
+          outline: none
+
+          &:hover 
+            text-decoration: underline
+
+          &:not(:last-child)
+            border-right: 1px solid rgba(51, 51, 51, 0.2)
+
+      .content__result 
+        display: flex
+        justify-content: space-between
+
+        &-column 
+          &:not(:first-child)
+            margin-left: 2rem
+
+          .column__item 
+            margin-bottom: 2.8rem
+
+            transform-origin: left
+
+            +tr
+
+            &[data-menu-result="soupe"],
+            &[data-menu-result="pasta"],
+            &[data-menu-result="desert"],
+            &[data-menu-result="wine"],
+            &[data-menu-result="beer"],
+            &[data-menu-result="drinks"]        
+              display: none
+
+            &.column__item_active
+              animation-name: item_scale
+              animation-duration: 1s  
+
+            &-title 
+              +font('Open Sans', 1.8rem, #333333)
+              line-height: 1.8rem
+
+            &-description 
+              +font('Open Sans', 1.2rem, rgba(51, 51, 51, 0.5))  
+              line-height: 1.8rem
+
+@keyframes item_scale
+  from 
+    transform: scaleX(0)
+  to 
+    transform: scaleX(1)
+
+@media (max-width: 830px)
+  .menu__inner-content .content__result
+    flex-wrap: wrap              
+
+  .menu__inner-content .content__nav-link
+    padding: 1rem 2rem  
+
+@media (max-width: 714px)
+  .menu__inner-content .content__result
+    justify-content: center  
+
+@media (max-width: 575px)
+  .menu__inner-content .content__nav
+    flex-wrap: wrap    

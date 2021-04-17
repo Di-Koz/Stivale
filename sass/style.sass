@@ -1,0 +1,45 @@
+@import "_vars"
+@import "_mixins"
+@import "_global"
+
+html 
+  font-size: 10px
+
+*,
+*:after,
+*:before 
+  box-sizing: border-box
+
+.container 
+  width: 100%
+  max-width: 128rem
+  margin: 0 auto   
+
+section
+  padding: 10rem 0
+
+  &.home
+    padding: 32.5rem 0 8.3rem 0
+
+  &.gallery,
+  &.map 
+    padding: 0  
+
+@media (max-width: 1280px) 
+  .container 
+    margin: 0
+    padding: 0 2rem
+
+@import "header" 
+@import "home" 
+@import "about" 
+@import "team" 
+@import "booking" 
+@import "special" 
+@import "menu" 
+@import "events" 
+@import "gallery" 
+@import "contacts" 
+@import "map" 
+@import "footer" 
+

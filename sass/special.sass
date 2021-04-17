@@ -1,0 +1,73 @@
+.special 
+  background: url(../css/images/special/bg.jpg) center no-repeat
+  background-size: cover
+
+  position: relative
+
+  &__inner 
+    &-slider 
+      width: 100%
+      position: relative
+
+      .slide 
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        &__img 
+          img 
+            width: 60rem
+
+        &__content 
+          .title 
+            margin-bottom: 4rem  
+
+      .slick-dots 
+        display: flex    
+
+        position: absolute
+        bottom: -4.5rem
+        left: 50%
+        z-index: 1
+
+        transform: translateX(-50%)   
+
+        li 
+          width: 1rem
+          height: 1rem
+
+          background: rgba(255, 255, 255, 0.5)
+          border-radius: 50%
+
+          &.slick-active
+            background: white
+
+          &:hover
+            cursor: pointer   
+
+          &:not(:last-child)
+            margin-right: 2rem
+
+          button 
+            display: none 
+
+@media (max-width: 1050px)
+  .special__inner-slider 
+    .slide__img
+      img 
+        width: 50rem  
+
+@media (max-width: 950px)
+  .special__inner-slider
+    .slide
+      flex-wrap: wrap
+      justify-content: center 
+
+    .slide__content
+      margin-top: 1.5rem             
+
+@media (max-width: 600px)
+  .special__inner-slider 
+    .slide__img
+      img 
+        width: 100%            
