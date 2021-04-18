@@ -86,10 +86,14 @@
 
 @media (max-width: 830px)
   .menu__inner-content .content__result
-    flex-wrap: wrap              
+    flex-wrap: wrap 
+    flex-direction: column             
 
   .menu__inner-content .content__nav-link
     padding: 1rem 2rem  
+
+  .menu__inner-content .content__result-column:not(:first-child)
+    margin-left: 0
 
 @media (max-width: 714px)
   .menu__inner-content .content__result
