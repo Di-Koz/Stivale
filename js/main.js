@@ -11,8 +11,28 @@ const burger = document.querySelector('.burger'),
   
   header = document.querySelector('.header'),
   
-  navLinks = document.querySelectorAll('.nav__left-link, .nav__right-link, .book');
-//Burger
+  navLinks = document.querySelectorAll('.nav__left-link, .nav__right-link, .book'),
+
+  mapButton = document.querySelector('.map__button > button'),
+  mapContent = document.querySelector('.map__content'),
+
+  modalButtons = document.querySelectorAll('.modal__button'),
+  modal = document.querySelector('.modal'),
+  windowHeaderSpan = document.querySelector('.window__header > span'),
+  windowContent = document.querySelector('.window__content'),
+  close = document.querySelector('.close'),
+  
+  order = document.querySelectorAll('.order'),
+  message = document.querySelectorAll('.message'),
+  gallery = document.querySelectorAll('.gallery__img'),
+  
+  aboutInnerImg = document.querySelector('.about__inner-img');
+
+const randomInteger = (min, max) => {
+  return Math.floor(min + Math.random() * (max + 1 - min));
+}
+
+  //Burger
 burger.addEventListener('click', () => {
   burger.classList.toggle('burger_active');
   navs.forEach(item => {
@@ -85,6 +105,96 @@ navLinks.forEach(item => {
     })
   })
 })
+//map
+mapButton.addEventListener('click', () => {
+  if (mapButton.textContent == 'Открыть карту') {
+    mapButton.textContent = 'Закрыть карту';
+    mapButton.style.marginBottom = 2 + 'rem';
+    mapContent.style.display = 'block';
+  } else {
+    mapButton.textContent = 'Открыть карту';
+    mapButton.style.marginBottom = 0;
+    mapContent.style.display = 'none';
+  }
+})
+
+//modal
+modalButtons.forEach((item) => {
+  item.addEventListener('click', (event) => {
+    event.preventDefault();
+    let stringHeader = "";
+    let stringMain = "";
+    let modalShow = true;
+
+    if (item.textContent == 'Заказать столик') {
+      if (order[0].value == '' || order[1].value == '' || order[2].value == '+7 (   )    -   ' || order[4].value == '__/__') {
+        alert('Указаны не все параметры');
+        modalShow = false;
+      } else {
+        stringHeader = 'Заказ столика';
+        stringMain = `<p style="margin-bottom: 1rem">Заказ №${randomInteger(0, 100)}</p> <p style="margin-bottom: 1rem">Имя: ${order[0].value}</p> <p style="margin-bottom: 1rem">Почта: ${order[1].value}</p> <p style="margin-bottom: 1rem">Телефон: ${order[2].value}</p> <p style="margin-bottom: 1rem">Количество персон: ${order[3].value}</p> <p style="margin-bottom: 1rem">Дата: ${order[4].value}</p> <p style="margin-bottom: 1rem">Время суток: ${order[5].value}</p>Оформлено</p>`;
+      }
+    } else {
+      if (message[0].value == '' || message[2].value == '' || message[1].value == '+7 (   )    -   ' || message[3].value == '') {
+        alert('Указаны не все параметры');
+        modalShow = false;
+      } else {
+        stringHeader = 'Отправка сообщения';
+        stringMain = `<p style="margin-bottom: 1rem">Спасибо, ${message[0].value}</p> </p>Мы ценим отзывы наших клиентов</p>`;
+      }
+    }
+
+    if (modalShow) {
+      windowHeaderSpan.textContent = stringHeader;
+      windowContent.innerHTML = stringMain;
+
+      modal.classList.add('modal_show');
+    }
+    
+  })
+});
+
+close.addEventListener('click', () => {
+  modal.classList.remove('modal_show');
+  windowContent.innerHTML = '';
+  document.querySelector('.modal__wrapper-window').style.width = 43 + 'rem';
+});
+//gallery
+gallery.forEach((item) => {
+  item.addEventListener('click', () => {
+    windowHeaderSpan.textContent = 'Фото';
+    const htmlCode = item.outerHTML;
+    const photo = document.createElement('div');
+    photo.innerHTML = htmlCode;
+    windowContent.append(photo);
+
+    modal.classList.add('modal_show');
+  })
+});
+
+//video
+const videoSrc = 'css/video/video.mp4';
+aboutInnerImg.addEventListener('click', () => {
+  windowHeaderSpan.textContent = 'Видео';
+  const video = document.createElement('video');
+  video.src = videoSrc;
+  video.controls = true;
+  document.querySelector('.modal__wrapper-window').style.width = 'initial';
+
+  if (window.innerWidth >= 800) {
+    video.width = 700;
+    video.height = 400; 
+  } else {
+    video.width = 400;
+    video.height = 250;
+  }
+  
+
+  windowContent.append(video);
+
+  modal.classList.add('modal_show');
+})
+
 //Slick slider
 $('.special__inner-slider').slick({
   infinite: true,
