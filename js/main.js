@@ -149,6 +149,7 @@ modalButtons.forEach((item) => {
       windowContent.innerHTML = stringMain;
 
       modal.classList.add('modal_show');
+      document.body.classList.add('body_overflow');
     }
     
   })
@@ -156,6 +157,8 @@ modalButtons.forEach((item) => {
 
 close.addEventListener('click', () => {
   modal.classList.remove('modal_show');
+  document.body.classList.remove('body_overflow');
+
   windowContent.innerHTML = '';
   document.querySelector('.modal__wrapper-window').style.width = 43 + 'rem';
 });
@@ -169,6 +172,8 @@ gallery.forEach((item) => {
     windowContent.append(photo);
 
     modal.classList.add('modal_show');
+    document.body.classList.add('body_overflow');
+
   })
 });
 
@@ -193,6 +198,8 @@ aboutInnerImg.addEventListener('click', () => {
   windowContent.append(video);
 
   modal.classList.add('modal_show');
+  document.body.classList.add('body_overflow');
+
 })
 
 //Slick slider
